@@ -2,7 +2,26 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Base dinâmico: corrige CSS/JS no GitHub Pages (site em subpasta, ex.: usuario.github.io/repo/) -->
+  <script>
+    (function () {
+      if (location.protocol !== "http:" && location.protocol !== "https:") return;
+      var p = location.pathname;
+      var dir;
+      if (p.endsWith("/")) {
+        dir = p;
+      } else if (p.endsWith("index.html")) {
+        dir = p.slice(0, -"index.html".length);
+      } else {
+        dir = p + "/";
+      }
+      if (!dir.endsWith("/")) dir += "/";
+      var b = document.createElement("base");
+      b.href = location.origin + dir;
+      document.head.insertBefore(b, document.head.firstChild);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Açaí Land — açaí gourmet delivery em Niterói-RJ. Açaí de verdade, não sorvete. Feito da fruta, natural e irresistível.">
   <meta name="theme-color" content="#1a0d2e">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
