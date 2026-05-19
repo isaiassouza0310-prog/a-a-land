@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -20,9 +20,10 @@
         root = location.origin + dir;
       }
       w.__ASSET_ROOT__ = root;
-      document.write(
-        '<link rel="stylesheet" href="' + root + "css/main.css" + '">'
-      );
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = root + "css/main.css";
+      document.head.appendChild(link);
     })(window);
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
