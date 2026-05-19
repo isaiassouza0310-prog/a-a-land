@@ -2,38 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <!-- Raiz dos assets: URL absoluta no GitHub Pages (subpasta /nome-do-repo/) — document.write evita pedido errado a /css/ antes do <base> -->
-  <script>
-    (function (w) {
-      var root = "";
-      if (location.protocol === "http:" || location.protocol === "https:") {
-        var p = location.pathname;
-        var dir;
-        if (p.endsWith("/")) {
-          dir = p;
-        } else if (p.length >= 10 && p.slice(-10) === "index.html") {
-          dir = p.slice(0, -10);
-        } else {
-          dir = p + "/";
-        }
-        if (dir.slice(-1) !== "/") dir += "/";
-        root = location.origin + dir;
-      }
-      w.__ASSET_ROOT__ = root;
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = root + "css/main.css";
-      document.head.appendChild(link);
-    })(window);
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="css/main.css">
   <meta name="description" content="Açaí Land — açaí gourmet delivery em Niterói-RJ. Açaí de verdade, não sorvete. Feito da fruta, natural e irresistível.">
   <meta name="theme-color" content="#1a0d2e">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Açaí Land | Gourmet Delivery — Niterói-RJ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🫐</text></svg>">
 </head>
@@ -222,14 +198,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var root = window.__ASSET_ROOT__ || "";
-      var s = document.createElement("script");
-      s.src = root + "js/main.js";
-      s.async = false;
-      document.body.appendChild(s);
-    })();
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
